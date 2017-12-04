@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 
 public class Table implements Serializable {
-    private int soThuTu;
+    private String soThuTu;
     private String trangThai;
 
     @Override
@@ -18,16 +18,16 @@ public class Table implements Serializable {
     public Table() {
     }
 
-    public Table(int soThuTu, String trangThai) {
+    public Table(String soThuTu, String trangThai) {
         this.soThuTu = soThuTu;
         this.trangThai = trangThai;
     }
 
-    public int getSoThuTu() {
+    public String getSoThuTu() {
         return soThuTu;
     }
 
-    public void setSoThuTu(int soThuTu) {
+    public void setSoThuTu(String soThuTu) {
         this.soThuTu = soThuTu;
     }
 

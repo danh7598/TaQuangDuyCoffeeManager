@@ -26,6 +26,10 @@ public class TableAdapter extends ArrayAdapter<Table> {
 
     public TableAdapter(@NonNull Activity context, int resource, @NonNull List<Table> objects) {
         super(context, resource, objects);
+        this.context = context;
+        this.resource = resource;
+        this.objects = objects;
+
     }
 
     @NonNull
