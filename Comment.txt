@@ -1,0 +1,15 @@
+Kiếm cái hình bàn khác nhé, kiếm hình nào không có background ấy
+itemtable.xml dùng ở đâu vậy, em chưa dùng phải không, đổi tên lại nhé item_table. màu quá lòe loẹt.
+itemtablegird.xml cũng đổi tên lại nhé. size chứ quá to. để xuống 20,
+           cần set backdround cho nó. do cái hình em nền màu trắng mà nó không phải nên trong xấu.
+           item nên co border, margin 5dp
+
+
+Các yêu cầu cần làm tiếp theo.
+1. Fix những chỗ anh đã nhận xét vào nhánh 20171206_HoanTQ_Check, rồi ghép về master.
+Tạo các nhánh mới phù hợp để làm những yêu cầu sau:
+2. Chuyển hết tất cả các string: dọn dẹp, có khách, đặt trước vào file res/values/strings.xml
+3. Chuyển hết tất cả các màu trong code về file res/values/colors.xml
+3. Tạo dữ liệu giả nhiều hơn một chút để có thể srcoll listview được. Trạng thái của mỗi bàn em đã set ở chữ rồi nhưng cũng nên set riêng cho cả icon nữa.
+4. Xây dựng màn hình login, phải nhập username và pass thì mới vào màn hình chính. Username và pass tạm thời em set cứng ở code.
+5. Chú ý thiết kết giao diện đẹp một chút, làm xong thì inbox anh rồi anh sửa tiếp cho.

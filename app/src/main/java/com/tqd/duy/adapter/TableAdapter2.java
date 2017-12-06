@@ -20,6 +20,7 @@ import java.util.List;
  * Created by Danh on 12/6/2017.
  */
 
+//Hai cái adapter này gần giống nhau, để hai cái làm gì vậy? có một cái anh có thấy dùng đâu
 public class TableAdapter2 extends ArrayAdapter<Table> {
     Activity context;
     int resource;
