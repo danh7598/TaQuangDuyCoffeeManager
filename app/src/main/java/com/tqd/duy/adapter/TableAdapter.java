@@ -1,7 +1,7 @@
 package com.tqd.duy.adapter;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.Context;//cái này không dùng thì xóa đi
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,13 +17,14 @@ import com.tqd.duy.models.Table;
 import java.util.List;
 
 /**
- * Created by Danh on 12/4/2017.
+ * Created by Danh on 12/4/2017.//Tên em là Duy sao ở đây là Danh?
  */
 
 public class TableAdapter extends ArrayAdapter<Table> {
     Activity context;
     int resource;
     List<Table> objects;
+    //chuyển hết về privete nhé
 
     public TableAdapter(@NonNull Activity context, int resource, @NonNull List<Table> objects) {
         super(context, resource, objects);
@@ -43,7 +44,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
         final Table table = this.objects.get(position);
         txtSoBan.setText(table.getSoThuTu());
         txtTrangThai.setText(table.getTrangThai());
-        if (txtTrangThai.getText().toString() == "Trống")
+        if (txtTrangThai.getText().toString() == "Trống")//so sánh chuỗi bị sai nhé, dùng phép equals
         {
             txtTrangThai.setTextColor(Color.parseColor("#FF00C611"));
         }
@@ -56,7 +57,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
             txtTrangThai.setTextColor(Color.parseColor("#FFD50000"));
         }
         return  row;
-
+//không để dòng trống ở cuối phương thức nhé.
     }
 }
 

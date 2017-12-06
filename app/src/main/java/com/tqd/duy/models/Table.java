@@ -7,8 +7,8 @@ import java.io.Serializable;
  */
 
 public class Table implements Serializable {
-    private String soThuTu;
-    private String trangThai;
+    private String soThuTu;//đổi lại thàn id nhé
+    private String trangThai;//đặt tên lại theo chuẩn tiếng anh đi em, đừng đặt tiếng việt
 
     @Override
     public String toString() {

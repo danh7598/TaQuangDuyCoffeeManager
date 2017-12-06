@@ -11,13 +11,13 @@ import com.tqd.duy.adapter.TableAdapter2;
 import com.tqd.duy.models.Table;
 
 import java.util.ArrayList;
-
+//cái import nào không dùng thì xóa đi
 public class MainActivity extends AppCompatActivity {
 
     GridView gvTable;
     ArrayList<Table> dsTable;
     TableAdapter2 adapterTable;
-
+//chuyển về private
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         dsTable.add(new Table("Bàn số 6","Trống"));
         adapterTable = new TableAdapter2(MainActivity.this,R.layout.itemtablegird,dsTable);
         gvTable.setAdapter(adapterTable);
-
+        //viết hàm tạo dữ liệu giả ở models rồi gọi ra nhé, không viết ở đây
     }
 
     private void addEvents() {
