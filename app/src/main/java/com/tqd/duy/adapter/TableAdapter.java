@@ -2,6 +2,7 @@ package com.tqd.duy.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -42,6 +43,18 @@ public class TableAdapter extends ArrayAdapter<Table> {
         final Table table = this.objects.get(position);
         txtSoBan.setText(table.getSoThuTu());
         txtTrangThai.setText(table.getTrangThai());
+        if (txtTrangThai.getText().toString() == "Trống")
+        {
+            txtTrangThai.setTextColor(Color.parseColor("#FF00C611"));
+        }
+        else if (txtTrangThai.getText().toString() == "Đang dọn dẹp")
+        {
+            txtTrangThai.setTextColor(Color.parseColor("#FF004EB5"));
+        }
+        else if (txtTrangThai.getText().toString() == "Có khách")
+        {
+            txtTrangThai.setTextColor(Color.parseColor("#FFD50000"));
+        }
         return  row;
 
     }
