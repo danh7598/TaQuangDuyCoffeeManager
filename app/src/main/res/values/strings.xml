@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Coffee Management</string>
+    <string name="app_name">Quản lý quán cà phê</string>
     <string name="AVAILABLE">Có sẵn</string>
     <string name="BUSY">Có khách</string>
     <string name="CLEAN">Đang dọn dẹp</string>

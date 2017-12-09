@@ -28,7 +28,7 @@
         android:text="Bàn số"
         android:textAlignment="viewStart"
         android:textColor="#FF000000"
-        android:textSize="20sp" />
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/item_table_txt_status"
@@ -41,6 +41,6 @@
         android:layout_weight="0"
         android:text="Trạng thái"
         android:textAlignment="viewStart"
-        android:textSize="20sp" />
+        android:textSize="17sp" />
 
 </LinearLayout>

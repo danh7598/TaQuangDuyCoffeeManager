@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context="com.tqd.duy.coffeemanagement.MainActivity">
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Danh sách các bàn"
+        android:textSize="20sp" />
+
     <GridView
         android:id="@+id/activity_main_gv_table"
         android:layout_width="match_parent"
