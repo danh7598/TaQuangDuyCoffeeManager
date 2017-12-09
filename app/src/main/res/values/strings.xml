@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Coffee Management</string>
+    <string name="AVAILABLE">Có sẵn</string>
+    <string name="BUSY">Có khách</string>
+    <string name="CLEAN">Đang dọn dẹp</string>
+    <string name="BOOKED">Đã đặt trước</string>
 </resources>

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addControls() {
-        gvTable = findViewById(R.id.gvTable);
+        gvTable = findViewById(R.id.activity_main_gv_table);
         dsTable = new ArrayList<>();
         adapterTable = new TableAdapter(MainActivity.this,R.layout.item_table,dsTable);
         gvTable.setAdapter(adapterTable);
