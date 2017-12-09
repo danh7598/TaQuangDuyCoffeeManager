@@ -45,19 +45,19 @@ public class TableAdapter extends ArrayAdapter<Table> {
         txtStatus.setText(table.getStatus());
         if (txtStatus.getText().toString() == "Trống")
         {
-            txtStatus.setTextColor(Color.parseColor("#FF00C611"));
+            txtStatus.setTextColor(R.color.colorGreen);
         }
         else if (txtStatus.getText().toString() == "Đang dọn dẹp")
         {
-            txtStatus.setTextColor(Color.parseColor("#FF004EB5"));
+            txtStatus.setTextColor(R.color.colorBlue);
         }
         else if (txtStatus.getText().toString() == "Có khách")
         {
-            txtStatus.setTextColor(Color.parseColor("#FFD50000"));
+            txtStatus.setTextColor(R.color.colorRed);
         }
         else if (txtStatus.getText().toString() == "Đã đặt trước")
         {
-            txtStatus.setTextColor(Color.parseColor("#FF750624"));
+            txtStatus.setTextColor(R.color.colorBrown);
         }
         return  row;
 
