@@ -1,7 +1,6 @@
 package com.tqd.duy.adapter;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,17 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import com.tqd.duy.coffeemanagement.R;
 import com.tqd.duy.models.Table;
-
 import java.util.List;
 
 /**
  * Created by Danh on 12/6/2017.
  */
 
-//Hai cái adapter này gần giống nhau, để hai cái làm gì vậy? có một cái anh có thấy dùng đâu
 public class TableAdapter extends ArrayAdapter<Table> {
     private Activity context;
     private int resource;
@@ -33,6 +29,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
 
     }
 
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -43,22 +40,23 @@ public class TableAdapter extends ArrayAdapter<Table> {
         final Table table = this.objects.get(position);
         txtId.setText(table.getId());
         txtStatus.setText(table.getStatus());
-        if (txtStatus.getText().toString() == "Trống")
+        if (txtStatus.getText().toString().equals(context.getString(R.string.AVAILABLE)))
         {
-            txtStatus.setTextColor(R.color.colorGreen);
+            txtStatus.setTextColor(context.getColor(R.color.colorGreen));
         }
-        else if (txtStatus.getText().toString() == "Đang dọn dẹp")
+        else if (txtStatus.getText().toString().equals(context.getString(R.string.CLEAN)))
         {
-            txtStatus.setTextColor(R.color.colorBlue);
+            txtStatus.setTextColor(context.getColor(R.color.colorBlue));
         }
-        else if (txtStatus.getText().toString() == "Có khách")
+        else if (txtStatus.getText().toString().equals(context.getString(R.string.BUSY)))
         {
-            txtStatus.setTextColor(R.color.colorRed);
+            txtStatus.setTextColor(context.getColor(R.color.colorRed));
         }
-        else if (txtStatus.getText().toString() == "Đã đặt trước")
+        else if (txtStatus.getText().toString().equals(context.getString(R.string.BOOKED)))
         {
-            txtStatus.setTextColor(R.color.colorBrown);
+            txtStatus.setTextColor(context.getColor(R.color.colorBrown));
         }
+
         return  row;
 
     }
