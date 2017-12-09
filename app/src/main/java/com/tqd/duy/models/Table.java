@@ -7,35 +7,35 @@ import java.io.Serializable;
  */
 
 public class Table implements Serializable {
-    private String soThuTu;//đổi lại thàn id nhé
-    private String trangThai;//đặt tên lại theo chuẩn tiếng anh đi em, đừng đặt tiếng việt
+    private String id;//đổi lại thàn id nhé
+    private String status;//đặt tên lại theo chuẩn tiếng anh đi em, đừng đặt tiếng việt
 
     @Override
     public String toString() {
-        return "Trạng thái: " + trangThai;
+        return "Trạng thái: " + status;
     }
 
     public Table() {
     }
 
-    public Table(String soThuTu, String trangThai) {
-        this.soThuTu = soThuTu;
-        this.trangThai = trangThai;
+    public Table(String id, String status) {
+        this.id = id;
+        this.status = status;
     }
 
-    public String getSoThuTu() {
-        return soThuTu;
+    public String getId() {
+        return id;
     }
 
-    public void setSoThuTu(String soThuTu) {
-        this.soThuTu = soThuTu;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getTrangThai() {
-        return trangThai;
+    public String getStatus() {
+        return status;
     }
 
-    public void setTrangThai(String trangThai) {
-        this.trangThai = trangThai;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
