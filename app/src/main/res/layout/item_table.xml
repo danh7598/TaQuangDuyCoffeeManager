@@ -25,7 +25,6 @@
         android:layout_below="@+id/imageButton"
         android:layout_marginHorizontal="10dp"
         android:layout_weight="0"
-        android:text="Bàn số"
         android:textAlignment="viewStart"
         android:textColor="#FF000000"
         android:textSize="17sp" />
@@ -39,7 +38,6 @@
         android:layout_below="@+id/item_table_txt_id"
         android:layout_marginHorizontal="10dp"
         android:layout_weight="0"
-        android:text="Trạng thái"
         android:textAlignment="viewStart"
         android:textSize="17sp" />
 

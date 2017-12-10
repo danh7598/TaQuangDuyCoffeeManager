@@ -5,4 +5,8 @@
     <string name="CLEAN">Đang dọn dẹp</string>
     <string name="BOOKED">Đã đặt trước</string>
     <string name="TABLE_NUM">Bàn số</string>
+    <string name="user_name">Tên đăng nhập</string>
+    <string name="user_password">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="list_table">Danh sách các bàn</string>
 </resources>

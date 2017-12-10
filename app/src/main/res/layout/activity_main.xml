@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Danh sách các bàn"
+        android:text="@string/list_table"
         android:textSize="20sp" />
 
     <GridView
