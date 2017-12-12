@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_weight="0"
+        android:layout_centerHorizontal="true"
         android:background="@android:drawable/alert_light_frame"
+        android:contentDescription="@string/TABLE_DESCRIPTION"
         app:srcCompat="@drawable/table" />
 
     <TextView
         android:id="@+id/item_table_txt_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageButton"
-        android:layout_marginHorizontal="10dp"
-        android:layout_weight="0"
-        android:text="Bàn số"
-        android:textAlignment="viewStart"
-        android:textColor="#FF000000"
+        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignStart="@+id/imageButton4"
+        android:layout_below="@+id/imageButton4"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:text="@string/TABLE_NUM"
+        android:textColor="@android:color/background_dark"
         android:textSize="17sp" />
 
     <TextView
         android:id="@+id/item_table_txt_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignLeft="@+id/item_table_txt_id"
+        android:layout_alignStart="@+id/item_table_txt_id"
         android:layout_below="@+id/item_table_txt_id"
-        android:layout_marginHorizontal="10dp"
-        android:layout_weight="0"
-        android:text="Trạng thái"
-        android:textAlignment="viewStart"
+        android:text="@string/CLEAN"
+        android:textColor="@android:color/background_dark"
         android:textSize="17sp" />
 
-</LinearLayout>
+</RelativeLayout>
