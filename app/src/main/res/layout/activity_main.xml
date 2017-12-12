@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.tqd.duy.coffeemanagement.MainActivity">
-
     <TabHost
         android:id="@+id/tabHost"
         android:layout_width="match_parent"

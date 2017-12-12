@@ -12,10 +12,10 @@ import java.util.ArrayList;
  * Created by Danh on 12/9/2017.
  */
 
-public class Example {
+public class TableExample {
     private Activity context;
     private ArrayList<Table> dsTable;
-    public Example(Activity context, ArrayList<Table> dsTable) {
+    public TableExample(Activity context, ArrayList<Table> dsTable) {
         this.context = context;
         this.dsTable = dsTable;
     }
@@ -47,8 +47,6 @@ public class Example {
                 context.getString(R.string.CLEAN)));
         dsTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(dsTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
-
-
-
     }
+
 }
