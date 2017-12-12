@@ -8,7 +8,8 @@
     <string name="user_name">Tên đăng nhập</string>
     <string name="user_password">Mật khẩu</string>
     <string name="login">Đăng nhập</string>
-    <string name="list_table">Danh sách các bàn</string>
     <string name="user_error">Sai tên đăng nhập hoặc mật khẩu</string>
     <string name="login_success">Đăng nhập thành công</string>
+    <string name="TABLE_DESCRIPTION">hình cái bàn</string>
+    <string name="TABLE_LIST">Danh sách bàn</string>
 </resources>
