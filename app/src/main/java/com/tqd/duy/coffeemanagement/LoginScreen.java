@@ -52,7 +52,7 @@ public class LoginScreen extends AppCompatActivity {
                     txtNotification.setText(R.string.user_error);
                 }
                 else {
-                    Toast.makeText(MainActivity.this,R.string.login_success,
+                    Toast.makeText(LoginScreen.this,R.string.login_success,
                             Toast.LENGTH_SHORT).show();
                 }
             }
