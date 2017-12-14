@@ -1,5 +1,6 @@
 package com.tqd.duy.coffeemanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -54,6 +55,7 @@ public class LoginScreen extends AppCompatActivity {
                 else {
                     Toast.makeText(LoginScreen.this,R.string.login_success,
                             Toast.LENGTH_SHORT).show();
+                    openMainActivity();
                 }
             }
             else {
@@ -61,6 +63,12 @@ public class LoginScreen extends AppCompatActivity {
             }
         }
     }
+
+    private void openMainActivity() {
+        Intent it = new Intent(LoginScreen.this,MainActivity.class);
+        startActivity(it);
+    }
+
     private void addControls() {
         txtUserName = findViewById(R.id.login_screen_txt_user_name);
         txtUserPassword = findViewById(R.id.login_screen_txt_user_password);
