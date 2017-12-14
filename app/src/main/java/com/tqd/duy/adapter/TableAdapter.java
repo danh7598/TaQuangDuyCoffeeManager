@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import com.tqd.duy.coffeemanagement.R;
 import com.tqd.duy.models.Table;
@@ -37,23 +38,28 @@ public class TableAdapter extends ArrayAdapter<Table> {
         View row = inflater.inflate(this.resource,null);
         TextView txtId = row.findViewById(R.id.item_table_txt_id);
         TextView txtStatus = row.findViewById(R.id.item_table_txt_status);
+        ImageButton imgCoffee = row.findViewById(R.id.item_table_img_coffee);
         final Table table = this.objects.get(position);
         txtId.setText(table.getId());
         txtStatus.setText(table.getStatus());
         if (txtStatus.getText().toString().equals(context.getString(R.string.AVAILABLE)))
         {
+            imgCoffee.setImageResource(R.drawable.coffeegreen);
             txtStatus.setTextColor(context.getColor(R.color.colorGreen));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.CLEAN)))
         {
+            imgCoffee.setImageResource(R.drawable.coffeeblue);
             txtStatus.setTextColor(context.getColor(R.color.colorBlue));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.BUSY)))
         {
+            imgCoffee.setImageResource(R.drawable.coffeered);
             txtStatus.setTextColor(context.getColor(R.color.colorRed));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.BOOKED)))
         {
+            imgCoffee.setImageResource(R.drawable.coffeebrown);
             txtStatus.setTextColor(context.getColor(R.color.colorBrown));
         }
 
