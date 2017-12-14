@@ -18,59 +18,30 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private EditText txtUserName;
-    private EditText txtUserPassword;
-    private Button btnLogin;
-    private ArrayList<User> dsUser;
-    private TextView txtNotification;
+    private GridView gvTable;
+    private ArrayList<Table> dsTable;
+    private TableAdapter adapterTable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_screen);
+        setContentView(R.layout.activity_main);
         addControls();
         addEvents();
     }
 
     private void addControls() {
+        gvTable = findViewById(R.id.activity_main_gv_table);
+        dsTable = new ArrayList<>();
+        TableExample tableExample1 = new TableExample(MainActivity.this, dsTable);
+        tableExample1.SetTableExample();
+        adapterTable = new TableAdapter(MainActivity.this, R.layout.item_table, dsTable);
+        gvTable.setAdapter(adapterTable);
 
-        txtUserName = findViewById(R.id.login_screen_txt_user_name);
-        txtUserPassword = findViewById(R.id.login_screen_txt_user_password);
-        btnLogin = findViewById(R.id.login_screen_btn_login);
-        txtNotification = findViewById(R.id.login_screen_txt_notification);
-        dsUser = new ArrayList<>();
-        UserExample userExample1 = new UserExample(dsUser);
-        userExample1.SetUserExample();
     }
 
     private void addEvents() {
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                processLogin();
-            }
-        });
+
     }
-    private void processLogin() {
-        String userName = txtUserName.getText().toString();
-        String userPass = txtUserPassword.getText().toString();
-        for (User user : dsUser)
-        {
-            if(userName.equalsIgnoreCase(user.getUserName()))
-            {
-                if(!userPass.equals(user.getUserPassword()))
-                {
-                    txtNotification.setText(R.string.user_error);
-                }
-                else {
-                    Toast.makeText(MainActivity.this,R.string.login_success,
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-            else {
-                txtNotification.setText(R.string.user_error);
-            }
-        }
-    }
+
 }
