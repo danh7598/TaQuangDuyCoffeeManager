@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Created by Danh on 12/12/2017.
  */
 
-public class LoginScreen extends AppCompatActivity {
+public class LoginScreenActivity extends AppCompatActivity {
     private EditText txtUserName;
     private EditText txtUserPassword;
     private Button btnLogin;
@@ -26,7 +26,7 @@ public class LoginScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_screen);
+        setContentView(R.layout.activity_login_screen);
         addControls();
         addEvents();
     }
@@ -53,7 +53,7 @@ public class LoginScreen extends AppCompatActivity {
                     txtNotification.setText(R.string.user_error);
                 }
                 else {
-                    Toast.makeText(LoginScreen.this,R.string.login_success,
+                    Toast.makeText(LoginScreenActivity.this,R.string.login_success,
                             Toast.LENGTH_SHORT).show();
                     openMainActivity();
                 }
@@ -65,7 +65,7 @@ public class LoginScreen extends AppCompatActivity {
     }
 
     private void openMainActivity() {
-        Intent it = new Intent(LoginScreen.this,MainActivity.class);
+        Intent it = new Intent(LoginScreenActivity.this,MainActivity.class);
         startActivity(it);
     }
 
