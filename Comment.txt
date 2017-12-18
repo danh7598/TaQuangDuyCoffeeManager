@@ -1,15 +1,20 @@
-Kiếm cái hình bàn khác nhé, kiếm hình nào không có background ấy
-itemtable.xml dùng ở đâu vậy, em chưa dùng phải không, đổi tên lại nhé item_table. màu quá lòe loẹt.
+Kiếm cái hình bàn khác nhé, kiếm hình nào không có background ấy -------> kiếm hình không có background chứ không phải là background màu trắng nhé
 itemtablegird.xml cũng đổi tên lại nhé. size chứ quá to. để xuống 20,
            cần set backdround cho nó. do cái hình em nền màu trắng mà nó không phải nên trong xấu.
-           item nên co border, margin 5dp
+           item nên co border, margin 5dp -----> anh bảo item nên có border sao chưa làm? margin 5p cũng chưa có.
+           -----> set image, text trong item margin nhỏ thôi, tốt nhất chỉ nên set margin giữa text với image, còn lại là set margin cho item
 
 
 Các yêu cầu cần làm tiếp theo.
 1. Fix những chỗ anh đã nhận xét vào nhánh 20171206_HoanTQ_Check, rồi ghép về master.
 Tạo các nhánh mới phù hợp để làm những yêu cầu sau:
-2. Chuyển hết tất cả các string: dọn dẹp, có khách, đặt trước vào file res/values/strings.xml
-3. Chuyển hết tất cả các màu trong code về file res/values/colors.xml
-3. Tạo dữ liệu giả nhiều hơn một chút để có thể srcoll listview được. Trạng thái của mỗi bàn em đã set ở chữ rồi nhưng cũng nên set riêng cho cả icon nữa.
-4. Xây dựng màn hình login, phải nhập username và pass thì mới vào màn hình chính. Username và pass tạm thời em set cứng ở code.
-5. Chú ý thiết kết giao diện đẹp một chút, làm xong thì inbox anh rồi anh sửa tiếp cho.
+1. Sửa lại màn hình login cho có màu nền, dùng màu primary, màu button là màu accent. Có thể đối giá trị màu accent thành màu vàng, thì màu accent mặc định nó không phù hợp lắm
+2. Thêm chức năng nhớ mật khẩu, khi đăng nhập có thể chọn nhớ mật khẩu hoặc không. Nếu chọn nhớ mật khẩu thì lưu mật khẩu và user đã nhập vào bộ nhớ share preferent (nếu chưa học thì làm sau) hoặc tự tìm hiểu rồi làm luôn.
+3. Thay đổi màu nền của main, dùng màu primary.
+4. Tìm lại icon khác, không được có màu nên. em search google từ khóa icon. rồi vào đó tìm. 3 icon giống nhau, khác màu là tốt nhất, nên để icon đơn sắc.
+5. Thêm một Floatting Acction Button vào ở góc dưới bên phải của màn hình main (là button hình tròn, tham khảo app gmail), để icon setting (bánh răng), màu accent. margin 10dp
+6. Đặt tên nhánh ở git bằng tên tiếng anh nhé.
+7. Khi click vào mỗi item table, hiện ra thông tin chi tiết của table đó.
+    - Bao gồm thời gian vào bàn, trạng thái bằng chữ, tên bàn. Danh sách các đồ uống ở dạng bảng.
+    - Thêm 2 button đặt ngang nhau, gồm thanh toán và gọi món.
+    - Nếu bàn trống thì hiện danh sách trắng, nút thanh toán bị ẩn đi không cho xuất hiện.

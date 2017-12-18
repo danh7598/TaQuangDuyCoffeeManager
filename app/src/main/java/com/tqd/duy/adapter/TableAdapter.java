@@ -27,9 +27,9 @@ public class TableAdapter extends ArrayAdapter<Table> {
         this.context = context;
         this.resource = resource;
         this.objects = objects;
-
+//xóa dòng trắng
     }
-
+//xóa bớt dòng trắng
 
     @NonNull
     @Override
@@ -45,7 +45,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
         if (txtStatus.getText().toString().equals(context.getString(R.string.AVAILABLE)))
         {
             imgCoffee.setImageResource(R.drawable.coffeegreen);
-            txtStatus.setTextColor(context.getColor(R.color.colorGreen));
+            txtStatus.setTextColor(context.getColor(R.color.colorGreen));//cái hàm get color chỉ chạy ở API 23, phải tránh dùng những hamgf này, hoặc phải bắt trường hợp
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.CLEAN)))
         {

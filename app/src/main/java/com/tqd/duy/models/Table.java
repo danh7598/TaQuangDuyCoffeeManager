@@ -7,13 +7,13 @@ import java.io.Serializable;
  */
 
 public class Table implements Serializable {
-    private String id;//đổi lại thàn id nhé
-    private String status;//đặt tên lại theo chuẩn tiếng anh đi em, đừng đặt tiếng việt
+    private String id;
+    private String status;
 
     @Override
     public String toString() {
         return "Trạng thái: " + status;
-    }
+    }//Chuyển luôn cái string này vào strings.xm nhé
 
     public Table() {
     }
