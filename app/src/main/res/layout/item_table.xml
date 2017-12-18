@@ -13,7 +13,7 @@
         android:layout_marginTop="14dp"
         android:background="@android:drawable/alert_light_frame"
         android:contentDescription="@string/TABLE_DESCRIPTION"
-        app:srcCompat="@drawable/table" />
+        app:srcCompat="@drawable/coffeegreen" />
 
     <TextView
         android:id="@+id/item_table_txt_id"
