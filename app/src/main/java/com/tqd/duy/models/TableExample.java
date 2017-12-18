@@ -20,7 +20,7 @@ public class TableExample {
         this.dsTable = dsTable;
     }
 
-    public void SetTableExample(){
+    public void SetTableExample(){//tên phương thức bắt đầu bằng chữ cái thường nhé
         dsTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(dsTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
         dsTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(dsTable.size()+1),

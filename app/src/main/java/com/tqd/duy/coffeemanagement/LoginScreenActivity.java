@@ -26,7 +26,7 @@ public class LoginScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_screen);
+        setContentView(R.layout.activity_login_screen);//bỏ chữ screen đi, không cần thiết, bỏ cả ở tên Activity nhé
         addControls();
         addEvents();
     }
@@ -38,7 +38,7 @@ public class LoginScreenActivity extends AppCompatActivity {
                 processLogin();
             }
         });
-
+//dư dòng trống này để lamfm gì, trước khi commit, cái nào dư xóa bớt đi cho sạch code
     }
 
     private void processLogin() {
@@ -74,9 +74,9 @@ public class LoginScreenActivity extends AppCompatActivity {
         txtUserPassword = findViewById(R.id.login_screen_txt_user_password);
         btnLogin = findViewById(R.id.login_screen_btn_login);
         txtNotification = findViewById(R.id.login_screen_txt_notification);
-        dsUser = new ArrayList<>();
+        dsUser = new ArrayList<>();//dùng listUser, hoặc users, không dùng tiếng việt
         UserExample userExample1 = new UserExample(dsUser);
         userExample1.SetUserExample();
     }
-
+//không để dòng trống
 }

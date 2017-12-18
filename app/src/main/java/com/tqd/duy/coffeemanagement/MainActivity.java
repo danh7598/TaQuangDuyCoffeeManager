@@ -32,16 +32,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void addControls() {
         gvTable = findViewById(R.id.activity_main_gv_table);
-        dsTable = new ArrayList<>();
+        dsTable = new ArrayList<>();//đổi thành tables
         TableExample tableExample1 = new TableExample(MainActivity.this, dsTable);
-        tableExample1.SetTableExample();
+        tableExample1.SetTableExample();//em nên viết một hàm getSampleData() ở trong class Table, hàm này trả về list table.
+        // Không cần thiết phải tạo class mới. Tương tự đối với User
         adapterTable = new TableAdapter(MainActivity.this, R.layout.item_table, dsTable);
         gvTable.setAdapter(adapterTable);
-
+//xóa dòng trắng
     }
 
     private void addEvents() {
 
     }
-
+//xóa dòng trắng
 }
