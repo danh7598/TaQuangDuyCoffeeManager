@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.tqd.duy.adapter.FoodAdapter;
 import com.tqd.duy.models.Food;
-import com.tqd.duy.models.FoodExample;
 import com.tqd.duy.models.Table;
 import java.util.ArrayList;
 
@@ -35,8 +34,8 @@ public class MenuActivity extends AppCompatActivity {
         lvFood = findViewById(R.id.activity_menu_lv_food);
         btnOrder = findViewById(R.id.activity_menu_btn_order);
         listFood = new ArrayList<>();
-        FoodExample foodExample1 = new FoodExample(listFood);
-        foodExample1.SetFoodExample();
+        Food food = new Food();
+        listFood = food.getSampleFood(this);
         adapterFood = new FoodAdapter(MenuActivity.this,R.layout.item_food,listFood);
         lvFood.setAdapter(adapterFood);
         getTableInformation();

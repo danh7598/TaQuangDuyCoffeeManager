@@ -11,9 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.tqd.duy.models.User;
-import com.tqd.duy.models.UserExample;
-
-
 import java.util.ArrayList;
 
 /**
@@ -71,9 +68,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.login_screen_btn_login);
         txtNotification = findViewById(R.id.login_screen_txt_notification);
         listUser = new ArrayList<>();
+        User user = new User();
+        listUser = user.getSampleUser();
         chkPasswordRemember = findViewById(R.id.activity_login_chk_password_remember);
-        UserExample userExample1 = new UserExample(listUser);
-        userExample1.SetUserExample();
         //Set data login nếu đã login từ trước
         SharedPreferences sharedPreferences = getSharedPreferences("userRemember",
                 MODE_PRIVATE);
