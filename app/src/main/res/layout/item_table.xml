@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/item_table_img_coffee"
+        android:id="@+id/item_table_btn_coffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,9 +19,9 @@
         android:id="@+id/item_table_txt_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/item_table_img_coffee"
-        android:layout_alignStart="@+id/item_table_img_coffee"
-        android:layout_below="@+id/item_table_img_coffee"
+        android:layout_alignLeft="@+id/item_table_btn_coffee"
+        android:layout_alignStart="@+id/item_table_btn_coffee"
+        android:layout_below="@+id/item_table_btn_coffee"
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
         android:text="@string/TABLE_NUM"

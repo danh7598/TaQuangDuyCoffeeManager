@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tqd.duy.coffeemanagement.MenuActivity">
+
+    <TextView
+        android:id="@+id/activity_menu_txt_number_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/TABLE_NUM"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activity_menu_txt_state_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="@string/AVAILABLE"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/activity_menu_lv_food"
+        android:layout_width="match_parent"
+        android:layout_height="376dp"
+        android:layout_weight="0" />
+
+    <Button
+        android:id="@+id/activity_menu_btn_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:text="Đặt món"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -12,4 +12,7 @@
     <string name="login_success">Đăng nhập thành công</string>
     <string name="TABLE_DESCRIPTION">hình cái bàn</string>
     <string name="TABLE_LIST">Danh sách bàn</string>
+    <string name="PRICE">Giá:</string>
+    <string name="NUMBER">Số lượng:</string>
+    <string name="PASSWORD_REMEMBER">Nhớ mật khẩu</string>
 </resources>

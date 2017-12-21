@@ -2,8 +2,6 @@ package com.tqd.duy.models;
 
 import android.app.Activity;
 
-import com.tqd.duy.adapter.TableAdapter;
-import com.tqd.duy.coffeemanagement.MainActivity;
 import com.tqd.duy.coffeemanagement.R;
 
 import java.util.ArrayList;
