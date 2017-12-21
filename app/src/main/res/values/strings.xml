@@ -15,4 +15,15 @@
     <string name="PRICE">Giá:</string>
     <string name="NUMBER">Số lượng:</string>
     <string name="PASSWORD_REMEMBER">Nhớ mật khẩu</string>
+    <string name="State">Trạng thái:</string>
+    <string name="Black_coffee">Cà phê đen</string>
+    <string name="Coffee_milk">Cà phê sữa</string>
+    <string name="Black_coffee_SG">Cà phê đen Sài Gòn</string>
+    <string name="Coffee_milk_SG">Cà phê sữa Sài Gòn</string>
+    <string name="Orange_juice">Nước cam</string>
+    <string name="Lemon_juice">Nước chanh</string>
+    <string name="Pepsi">Pepsi</string>
+    <string name="Yellow_sting">Sting vàng</string>
+    <string name="Strawberry_sting">Sting dâu</string>
+    <string name="Aquafina">Nước suối Aquafina</string>
 </resources>

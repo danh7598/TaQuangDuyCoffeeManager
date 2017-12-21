@@ -1,5 +1,7 @@
 package com.tqd.duy.models;
 
+import java.util.ArrayList;
+
 /**
  * Created by Danh on 12/10/2017.
  */
@@ -30,5 +32,11 @@ public class User {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public ArrayList<User> getSampleUser(){
+        ArrayList<User> listUser = new ArrayList<>();
+        listUser.add(new User("danh7598@gmail.com","danhiuy123"));
+        return listUser;
     }
 }
