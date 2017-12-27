@@ -32,10 +32,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
         this.context = context;
         this.resource = resource;
         this.objects = objects;
-//xóa dòng trắng
     }
-//xóa bớt dòng trắng
-
     @SuppressLint("NewApi")
     @NonNull
     @Override
@@ -50,23 +47,23 @@ public class TableAdapter extends ArrayAdapter<Table> {
         txtStatus.setText(table.getStatus());
         if (txtStatus.getText().toString().equals(context.getString(R.string.AVAILABLE)))
         {
-            btnCoffee.setImageResource(R.drawable.coffeegreen);
-            txtStatus.setTextColor(context.getColor(R.color.colorGreen));//cái hàm get color chỉ chạy ở API 23, phải tránh dùng những hamgf này, hoặc phải bắt trường hợp
+            btnCoffee.setImageResource(R.drawable.coffee_cup_green);
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorGreen));//cái hàm get color chỉ chạy ở API 23, phải tránh dùng những hamgf này, hoặc phải bắt trường hợp
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.CLEAN)))
         {
-            btnCoffee.setImageResource(R.drawable.coffeeblue);
-            txtStatus.setTextColor(context.getColor(R.color.colorBlue));
+            btnCoffee.setImageResource(R.drawable.coffee_cup_purple);
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorPurple));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.BUSY)))
         {
-            btnCoffee.setImageResource(R.drawable.coffeered);
-            txtStatus.setTextColor(context.getColor(R.color.colorRed));
+            btnCoffee.setImageResource(R.drawable.coffee_cup_red);
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorRed));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.BOOKED)))
         {
-            btnCoffee.setImageResource(R.drawable.coffeebrown);
-            txtStatus.setTextColor(context.getColor(R.color.colorBrown));
+            btnCoffee.setImageResource(R.drawable.coffee_cup_brown);
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorBrown));
         }
         btnCoffee.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,9 +74,6 @@ public class TableAdapter extends ArrayAdapter<Table> {
             }
         });
         return  row;
-
     }
-
-
 }
 
