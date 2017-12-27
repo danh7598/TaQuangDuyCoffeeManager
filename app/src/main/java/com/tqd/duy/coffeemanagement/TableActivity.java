@@ -45,6 +45,5 @@ public class TableActivity extends AppCompatActivity {
     }
     private void processSettingActivity() {
         Toast.makeText(this, getResources().getString(R.string.Setting), Toast.LENGTH_SHORT).show();
-        
     }
 }
