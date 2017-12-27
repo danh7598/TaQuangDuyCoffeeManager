@@ -25,7 +25,6 @@ public class FoodAdapter extends ArrayAdapter<Food> {
     private Activity context;
     private int resource;
     private List<Food> objects;
-    ImageView imgFood;
     TextView txtNameFood;
     TextView txtPriceFood;
     TextView txtNumberFood;
@@ -43,7 +42,6 @@ public class FoodAdapter extends ArrayAdapter<Food> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = this.context.getLayoutInflater();
         View row = inflater.inflate(this.resource,null);
-        imgFood = row.findViewById(R.id.item_food_img_food);
         txtNameFood = row.findViewById(R.id.item_menu_txt_name_food);
         txtPriceFood = row.findViewById(R.id.item_menu_txt_price_food);
         txtNumberFood = row.findViewById(R.id.item_menu_txt_number_food);
@@ -64,16 +62,16 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         btnMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (food.getNumberFood()>0)
-                {
+                if (food.getNumberFood()>0) {
                     food.setNumberFood(food.getNumberFood()-1);
                     txtNumberFood.setText(context.getResources().getString(R.string.NUMBER)+" "+(food.getNumberFood()));
                     notifyDataSetChanged();
                 }
             }
         });
+        row.setBackground(context.getResources().getDrawable(R.drawable.border_table));
         return  row;
     }
-    }
+}
 
 
