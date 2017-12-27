@@ -26,7 +26,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
     private int resource;
     private List<Table> objects;
     private Intent intent;
-    private static final int REQUEST_MENU_ACTIVITY = 0;
+    private static final int REQUEST_INFORMATION_ACTIVITY = 0;
     public TableAdapter(@NonNull Activity context, int resource, @NonNull List<Table> objects) {
         super(context, resource, objects);
         this.context = context;
@@ -70,9 +70,10 @@ public class TableAdapter extends ArrayAdapter<Table> {
             public void onClick(View view) {
                 intent = new Intent(context, MenuActivity.class);
                 intent.putExtra("table",table);
-                context.startActivityForResult(intent,REQUEST_MENU_ACTIVITY);
+                context.startActivityForResult(intent,REQUEST_INFORMATION_ACTIVITY);
             }
         });
+        row.setBackground(context.getResources().getDrawable(R.drawable.border_table));
         return  row;
     }
 }
