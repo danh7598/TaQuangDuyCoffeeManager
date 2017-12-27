@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quản lý quán cà phê</string>
-    <string name="AVAILABLE">Có sẵn</string>
-    <string name="BUSY">Có khách</string>
+    <string name="AVAILABLE">Đang có sẵn</string>
+    <string name="BUSY">Đã có khách</string>
     <string name="CLEAN">Đang dọn dẹp</string>
     <string name="BOOKED">Đã đặt trước</string>
     <string name="TABLE_NUM">Bàn số</string>

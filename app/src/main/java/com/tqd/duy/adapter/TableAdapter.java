@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.tqd.duy.coffeemanagement.MenuActivity;
+import com.tqd.duy.coffeemanagement.InformationActivity;
 import com.tqd.duy.coffeemanagement.R;
 import com.tqd.duy.models.Table;
 import java.util.List;
@@ -26,7 +26,6 @@ public class TableAdapter extends ArrayAdapter<Table> {
     private int resource;
     private List<Table> objects;
     private Intent intent;
-    private static final int REQUEST_INFORMATION_ACTIVITY = 0;
     public TableAdapter(@NonNull Activity context, int resource, @NonNull List<Table> objects) {
         super(context, resource, objects);
         this.context = context;
@@ -52,8 +51,8 @@ public class TableAdapter extends ArrayAdapter<Table> {
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.CLEAN)))
         {
-            btnCoffee.setImageResource(R.drawable.coffee_cup_purple);
-            txtStatus.setTextColor(context.getResources().getColor(R.color.colorPurple));
+            btnCoffee.setImageResource(R.drawable.coffee_cup_brown);
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorBrown));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.BUSY)))
         {
@@ -62,19 +61,20 @@ public class TableAdapter extends ArrayAdapter<Table> {
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.BOOKED)))
         {
-            btnCoffee.setImageResource(R.drawable.coffee_cup_brown);
-            txtStatus.setTextColor(context.getResources().getColor(R.color.colorBrown));
+            btnCoffee.setImageResource(R.drawable.coffee_cup_purple);
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorPurple));
         }
         btnCoffee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(context, MenuActivity.class);
+                intent = new Intent(context, InformationActivity.class);
                 intent.putExtra("table",table);
-                context.startActivityForResult(intent,REQUEST_INFORMATION_ACTIVITY);
+                context.startActivity(intent);
             }
         });
         row.setBackground(context.getResources().getDrawable(R.drawable.border_table));
         return  row;
     }
+
 }
 
