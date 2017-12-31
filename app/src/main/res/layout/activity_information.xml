@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0"
-        android:text="Trạng thái: đang dọn dẹp"
+        android:text="@string/CLEAN"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
         android:textStyle="bold|italic" />
@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:text="@string/Time"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
         android:textStyle="bold|italic" />
@@ -124,14 +125,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Gọi món" />
+            android:text="@string/Order" />
 
         <Button
             android:id="@+id/activity_information_btn_pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Thanh toán" />
+            android:longClickable="false"
+            android:text="@string/Pay" />
 
     </LinearLayout>
 

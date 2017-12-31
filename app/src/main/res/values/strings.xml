@@ -27,4 +27,7 @@
     <string name="Strawberry_sting">Sting dâu</string>
     <string name="Aquafina">Nước suối Aquafina</string>
     <string name="Setting">Cài đặt</string>
+    <string name="Order">Gọi món</string>
+    <string name="Pay">Thanh toán</string>
+    <string name="Time">Thời gian: ...</string>
 </resources>

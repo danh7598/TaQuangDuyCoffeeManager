@@ -28,6 +28,7 @@ public class InformationActivity extends AppCompatActivity {
     private BillAdapter adapterBill;
     private ArrayList<Food> listFood;
     private Button btnOrder;
+    private Button btnPay;
     private LinearLayout llTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +82,9 @@ public class InformationActivity extends AppCompatActivity {
         btnOrder = findViewById(R.id.activity_information_btn_order);
         lvBill = findViewById(R.id.activity_information_lv_bill);
         llTitle = findViewById(R.id.activity_information_ll_title);
+        btnPay = findViewById(R.id.activity_information_btn_pay);
         txtListFood.setVisibility(View.INVISIBLE);
         llTitle.setVisibility(View.INVISIBLE);
-        txtTime.setVisibility(View.INVISIBLE);
         listFood = new ArrayList<>();
         getTableInformation();
     }
@@ -92,5 +93,10 @@ public class InformationActivity extends AppCompatActivity {
         Table table = (Table) getIntent().getSerializableExtra("table");
         txtTableNumber.setText(table.getId());
         txtTableState.setText(table.getStatus());
+        if (txtTableState.getText().toString().equals(getResources().
+                getString(R.string.AVAILABLE)) || txtTableState.getText().toString().equals(getResources().
+                getString(R.string.CLEAN))){
+            btnPay.setEnabled(false);
+        }
     }
 }
