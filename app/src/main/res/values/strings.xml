@@ -12,7 +12,7 @@
     <string name="login_success">Đăng nhập thành công</string>
     <string name="TABLE_DESCRIPTION">hình cái bàn</string>
     <string name="TABLE_LIST">Danh sách bàn</string>
-    <string name="PRICE">Giá:</string>
+    <string name="PRICE">Đơn giá</string>
     <string name="NUMBER">Số lượng:</string>
     <string name="PASSWORD_REMEMBER">Nhớ mật khẩu</string>
     <string name="State">Trạng thái:</string>
@@ -30,4 +30,9 @@
     <string name="Order">Gọi món</string>
     <string name="Pay">Thanh toán</string>
     <string name="Time">Thời gian: ...</string>
+    <string name="list_food">Danh sách đồ uống</string>
+    <string name="Id">STT</string>
+    <string name="Name">Tên</string>
+    <string name="Number_short">SL</string>
+    <string name="Total">Thành tiền</string>
 </resources>

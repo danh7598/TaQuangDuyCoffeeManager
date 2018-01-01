@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="Danh sách đồ uống"
+        android:text="@string/list_food"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
         android:textStyle="bold|italic" />
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="STT"
+            android:text="@string/Id"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp" />
 
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Tên"
+            android:text="@string/Name"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp" />
 
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Đơn giá"
+            android:text="@string/PRICE"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp" />
 
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="SL"
+            android:text="@string/Number_short"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp" />
 
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Thành tiền"
+            android:text="@string/Total"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp" />
 

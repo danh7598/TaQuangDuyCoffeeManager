@@ -49,7 +49,7 @@ public class FoodAdapter extends ArrayAdapter<Food> {
         btnMinus = row.findViewById(R.id.item_food_btn_minus);
         final Food food = objects.get(position);
         txtNameFood.setText(food.getNameFood());
-        txtPriceFood.setText(context.getResources().getString(R.string.PRICE)+" "+food.getPriceFood());
+        txtPriceFood.setText(context.getResources().getString(R.string.PRICE)+": "+food.getPriceFood());
         txtNumberFood.setText(context.getResources().getString(R.string.NUMBER)+" "+food.getNumberFood());
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
