@@ -55,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 txtNotification.setText(R.string.user_error);
             }
+            //Trường hợp nhập sai thì cũng hiện toast nhé, ghi ở text lúc mới nhập xong thì bàn phím che mất dòng thông báo rồi
         }
     }
     private void openMainActivity() {
@@ -72,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         listUser = user.getSampleUser();
         chkPasswordRemember = findViewById(R.id.activity_login_chk_password_remember);
         //Set data login nếu đã login từ trước
+        //Phải thêm một giá trị để biết người dùng có chọn ghi nhớ đăng nhập hay không đã nhé.
         SharedPreferences sharedPreferences = getSharedPreferences("userRemember",
                 MODE_PRIVATE);
         String name = sharedPreferences.getString("userName","");
@@ -89,5 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             editor.putString("userPass", txtUserPassword.getText().toString());
             editor.apply();
         }
+        //vậy nếu không check thì không làm gì cả, tức là vẫn lưu giá trị cũ, nếu vậy thì từ check sang bỏ check không có tác dụng
+        //lưu thêm một biến Boolean chỉ là nhớ mật khẩu hay không.
     }
 }

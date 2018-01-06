@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CoffeeManagement.iml" filepath="$PROJECT_DIR$/CoffeeManagement.iml" />
+      <module fileurl="file://H:\Android\Class02\TaQuangDuyCoffeeManager\CoffeeManagement.iml" filepath="H:\Android\Class02\TaQuangDuyCoffeeManager\CoffeeManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TaQuangDuyCoffeeManager.iml" filepath="$PROJECT_DIR$/TaQuangDuyCoffeeManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

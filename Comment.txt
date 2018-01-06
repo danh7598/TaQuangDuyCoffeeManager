@@ -1,20 +1,45 @@
-Kiếm cái hình bàn khác nhé, kiếm hình nào không có background ấy -------> kiếm hình không có background chứ không phải là background màu trắng nhé
-itemtablegird.xml cũng đổi tên lại nhé. size chứ quá to. để xuống 20,
-           cần set backdround cho nó. do cái hình em nền màu trắng mà nó không phải nên trong xấu.
-           item nên co border, margin 5dp -----> anh bảo item nên có border sao chưa làm? margin 5p cũng chưa có.
-           -----> set image, text trong item margin nhỏ thôi, tốt nhất chỉ nên set margin giữa text với image, còn lại là set margin cho item
-
-
-Các yêu cầu cần làm tiếp theo.
-1. Fix những chỗ anh đã nhận xét vào nhánh 20171206_HoanTQ_Check, rồi ghép về master.
-Tạo các nhánh mới phù hợp để làm những yêu cầu sau:
+-Các nhận xét lần trước:
 1. Sửa lại màn hình login cho có màu nền, dùng màu primary, màu button là màu accent. Có thể đối giá trị màu accent thành màu vàng, thì màu accent mặc định nó không phù hợp lắm
+->>>> Màu nền login đâu? Màu button đâu?
 2. Thêm chức năng nhớ mật khẩu, khi đăng nhập có thể chọn nhớ mật khẩu hoặc không. Nếu chọn nhớ mật khẩu thì lưu mật khẩu và user đã nhập vào bộ nhớ share preferent (nếu chưa học thì làm sau) hoặc tự tìm hiểu rồi làm luôn.
+->> fix lại chức năng ghi nhớ đăng nhập theo như nhận xét ở Login Activity.
 3. Thay đổi màu nền của main, dùng màu primary.
+-->> để màu như hiện tại cũng được rồi, không caàn thay đổi
 4. Tìm lại icon khác, không được có màu nên. em search google từ khóa icon. rồi vào đó tìm. 3 icon giống nhau, khác màu là tốt nhất, nên để icon đơn sắc.
+->> icon cũ nào không dùng thì xóa đi, anh thấy em vẫn chưa xóa cái cũ. cái icon mơí tạm ok rồi. Tuy nhiên khi chạy dữ liệu giả thì làm cái dữ liệu da dạng một chút
 5. Thêm một Floatting Acction Button vào ở góc dưới bên phải của màn hình main (là button hình tròn, tham khảo app gmail), để icon setting (bánh răng), màu accent. margin 10dp
+->> OK
 6. Đặt tên nhánh ở git bằng tên tiếng anh nhé.
+->> ok
 7. Khi click vào mỗi item table, hiện ra thông tin chi tiết của table đó.
     - Bao gồm thời gian vào bàn, trạng thái bằng chữ, tên bàn. Danh sách các đồ uống ở dạng bảng.
+    -->>>> OK
     - Thêm 2 button đặt ngang nhau, gồm thanh toán và gọi món.
+    ---->>>> OK
     - Nếu bàn trống thì hiện danh sách trắng, nút thanh toán bị ẩn đi không cho xuất hiện.
+    ----> nếu bàn đang dọn dẹp thì ẩn luôn 2 button đó luôn, hiện một button khác thế chỗ hai thằng đó là "Dọn dẹp xong". Set visibility GONE để ẩm, VISIBLE để hiện (anh không nhơs chính xác chính tả lắm, nên gõ chữ cái đầu cho nó hiện ra)
+Nhận xét lần này:
+1. Tạo dữ liệu giả cho bàn nhiều nhiều một chút, (đa dạng nhieuef loại)
+2. Ở màn hình chi tiêts bàn thì thay đổi tiêu đề đi nhé, ví dụ như là Bàn số xx chẳng hạn
+3. Hai cái button nên margin rộng hơn một chút nữa. tùy em set sao cho hợp lí
+4. Tất cả các button trọng phải có background hết nhé. Tạm thời cho màu accent hết, rồi thay đổi màu sau, nếu em tự set màu riêng cho từng cai luôn cũng ok
+5. Các dòng text ở màn hinhf chi tiết bàn phải margin trái nhé, thường là 5dp. Dòng trạng thái thì cũng phải có màu nhé, màu theo màu ở ngoài list đó, xanh đỏ, vàng...
+6. Màn hình gọi món đổi tiêu đề, cái đơn giá nên hiển thị lại một chút. không cần phần lẻ, nếu là 10k thì là 10.000 ( có dầu chấm giữa mỗi 3 chữ số)
+7. Nút xác nhận width max parent luôn nhé, dài hết width của máy, set margin cho nó từ 5 đến 10 dp. set màu nữa
+8. Ở mỗi lần gọi món thì có thêm một button ghi chú nữa, trong trươngf hợp khách muốn yêu cầu thêm gì đó (ví duj cà phê sữa nhưng lại không đá, nhiều sữa chẳng hạn). Chỉ cần làm button, không cần set sự kiện (để làm sau).
+9. Ở trên cùng thêm một khung search, chỉ cần có edittext cho nó thôi, dài toàn màn hình, nhơ có margin, thông nhâts với cái nút xác nhận ở phía dưới (margin giống nhau). Set backrounf cho nó đẹp tí, khung bo tròn
+10. Khi bấm nút xác nhận sẽ hiện lên một dialog, trong đó hiện danh sách các món và số lượng vừa chọn, nút ok. Nhấn ok để xác nhận, nhấn tiếp tục để tắt dialog tiếp tục gọi món. Nhấn OK xong thì quay trở lại màn hình chi tiêts bàn. Lúc đó mới lưu danh sách món vừa gọi
+11. Toàn bộ nội dung trong chi tiết bàn không để sát canhj màn hình, margin tối thiểu 5dp.
+12. Ở list các banf, dòng trạng thái canh giữa item (gravity center), để 1 lines thôi. Bỏ chữ "Đang" đi cho ngắn gọn.
+
+
+
+Yêu cầu mới
+1. Sửa lại cái cũ vào nhánh 20180106_HoanTQ_Check như mọi lần nhé
+2. Các yêu cầu mới thì tạo nhánh mới rồi thực hiện, bao gồm:
+-Thêm nút logout ở màn hình main, cho vaò ở headerbar, bên phải. bấm vào thì quay lại màn hình login.
+-Ở Màn hình login thêm tuỳ chọn hiển thị mật khẩu, nếu tick vào thì khi gõ mật khẩu sẽ hiện thị như bình thường
+- Ở màn hình chi tiết bàn, thêm nuts back ở header bar, bên trái, icon mũi tên trái, màu trắng
+- Khi bàn đã gọi món rồi thì button thanh toán được enable, click vào thì hiển dialog xác nhận, bấm ok hoặc cancel. bấm ok thì chuyển sang màn hình thanh toán
+-Màn hình than toán hiện thì lại danh sách đồ uống, thành tiền, tổng tiền, có ô nhập % khuyễn mãi. Số tienè khách trả, khi nhập số tiền khách trả thì tự động tinhs tiền thôi lại. Có nút Hoàn tất thanh toán, bâm vào thì cũng phải cos xác nhận.
+
