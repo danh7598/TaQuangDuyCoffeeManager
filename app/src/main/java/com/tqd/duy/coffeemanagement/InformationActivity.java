@@ -3,6 +3,7 @@ package com.tqd.duy.coffeemanagement;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+//không dùng thì xóa
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
