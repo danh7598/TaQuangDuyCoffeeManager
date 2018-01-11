@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Quản lý quán cà phê</string>
-    <string name="AVAILABLE">Đang có sẵn</string>
-    <string name="BUSY">Đã có khách</string>
-    <string name="CLEAN">Đang dọn dẹp</string>
-    <string name="BOOKED">Đã đặt trước</string>
+    <string name="AVAILABLE">Có sẵn</string>
+    <string name="BUSY">Có khách</string>
+    <string name="CLEAN">Dọn dẹp</string>
+    <string name="BOOKED">Đặt trước</string>
     <string name="TABLE_NUM">Bàn số</string>
     <string name="user_name">Tên đăng nhập</string>
     <string name="user_password">Mật khẩu</string>
@@ -35,4 +35,10 @@
     <string name="Name">Tên</string>
     <string name="Number_short">SL</string>
     <string name="Total">Thành tiền</string>
-</resources>
+    <string name="Done_cleaned">Dọn dẹp xong</string>
+    <string name="Confirm">Xác nhận</string>
+    <string name="add_note">Thêm ghi chú</string>
+    <string name="continue_menu">Tiếp tục chọn</string>
+    <string name="OK">OK</string>
+    <string name="Detail">Chi tiết</string>
+    </resources>

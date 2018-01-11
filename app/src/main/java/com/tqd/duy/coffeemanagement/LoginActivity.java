@@ -46,6 +46,8 @@ public class LoginActivity extends AppCompatActivity {
             if (userName.equalsIgnoreCase(user.getUserName())) {
                 if (!userPass.equals(user.getUserPassword())) {
                     txtNotification.setText(R.string.user_error);
+                    Toast.makeText(LoginActivity.this, R.string.user_error,
+                            Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(LoginActivity.this, R.string.login_success,
                             Toast.LENGTH_SHORT).show();
@@ -54,8 +56,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
             } else {
                 txtNotification.setText(R.string.user_error);
+                Toast.makeText(LoginActivity.this, R.string.user_error,
+                        Toast.LENGTH_SHORT).show();
             }
-            //Trường hợp nhập sai thì cũng hiện toast nhé, ghi ở text lúc mới nhập xong thì bàn phím che mất dòng thông báo rồi
         }
     }
     private void openMainActivity() {
@@ -73,25 +76,24 @@ public class LoginActivity extends AppCompatActivity {
         listUser = user.getSampleUser();
         chkPasswordRemember = findViewById(R.id.activity_login_chk_password_remember);
         //Set data login nếu đã login từ trước
-        //Phải thêm một giá trị để biết người dùng có chọn ghi nhớ đăng nhập hay không đã nhé.
         SharedPreferences sharedPreferences = getSharedPreferences("userRemember",
                 MODE_PRIVATE);
-        String name = sharedPreferences.getString("userName","");
-        String pass = sharedPreferences.getString("userPass","");
-        txtUserName.setText(name);
-        txtUserPassword.setText(pass);
+        Boolean isCheck = sharedPreferences.getBoolean("isCheck",false);
+        if (isCheck) {
+            String name = sharedPreferences.getString("userName", "");
+            String pass = sharedPreferences.getString("userPass", "");
+            txtUserName.setText(name);
+            txtUserPassword.setText(pass);
+        }
     }
     //Lưu data login nếu check nhớ pass
     private void checkPasswordRemember() {
-        if (chkPasswordRemember.isChecked()) {
-            SharedPreferences sharedPreferences = getSharedPreferences("userRemember",
-                    MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("userName", txtUserName.getText().toString());
-            editor.putString("userPass", txtUserPassword.getText().toString());
-            editor.apply();
-        }
-        //vậy nếu không check thì không làm gì cả, tức là vẫn lưu giá trị cũ, nếu vậy thì từ check sang bỏ check không có tác dụng
-        //lưu thêm một biến Boolean chỉ là nhớ mật khẩu hay không.
+        SharedPreferences sharedPreferences = getSharedPreferences("userRemember",
+                MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("userName", txtUserName.getText().toString());
+        editor.putString("userPass", txtUserPassword.getText().toString());
+        editor.putBoolean("isCheck",chkPasswordRemember.isChecked());
+        editor.apply();
     }
 }
