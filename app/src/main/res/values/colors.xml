@@ -7,4 +7,5 @@
     <color name="colorPurple">#933EC5</color>
     <color name="colorRed">#FFD50000</color>
     <color name="colorBrown">#750624</color>
+    <color name="bgrLogin">#a2affc</color>
 </resources>

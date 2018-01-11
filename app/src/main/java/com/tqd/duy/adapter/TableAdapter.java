@@ -47,7 +47,7 @@ public class TableAdapter extends ArrayAdapter<Table> {
         if (txtStatus.getText().toString().equals(context.getString(R.string.AVAILABLE)))
         {
             btnCoffee.setImageResource(R.drawable.coffee_cup_green);
-            txtStatus.setTextColor(context.getResources().getColor(R.color.colorGreen));//cái hàm get color chỉ chạy ở API 23, phải tránh dùng những hamgf này, hoặc phải bắt trường hợp
+            txtStatus.setTextColor(context.getResources().getColor(R.color.colorGreen));
         }
         else if (txtStatus.getText().toString().equals(context.getString(R.string.CLEAN)))
         {

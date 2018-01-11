@@ -42,33 +42,33 @@ public class Table implements Serializable {
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
+                context.getString(R.string.CLEAN)));
+        listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
+                context.getString(R.string.BUSY)));
+        listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
+                context.getString(R.string.BOOKED)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
+                context.getString(R.string.BOOKED)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
+                context.getString(R.string.BUSY)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
+                context.getString(R.string.BUSY)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
+                context.getString(R.string.CLEAN)));
+        listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
+                context.getString(R.string.BOOKED)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
                 context.getString(R.string.AVAILABLE)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
                 context.getString(R.string.CLEAN)));
         listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
-        listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
-        listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
-        listTable.add(new Table(context.getString(R.string.TABLE_NUM) +" "+(listTable.size()+1),
-                context.getString(R.string.AVAILABLE)));
+                context.getString(R.string.CLEAN)));
         return listTable;
     }
 }

@@ -1,9 +1,5 @@
 package com.tqd.duy.coffeemanagement;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-//Không dùng thì xóa đi
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

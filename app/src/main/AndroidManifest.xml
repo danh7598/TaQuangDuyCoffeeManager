@@ -18,7 +18,12 @@
         </activity>
         <activity android:name=".TableActivity" />
         <activity android:name=".InformationActivity" />
-        <activity android:name=".MenuActivity">
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/Order"></activity>
+        <activity
+            android:name=".ConfirmActivity"
+            android:label="@string/Confirm">
         </activity>
     </application>
 

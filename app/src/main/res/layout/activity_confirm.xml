@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.tqd.duy.coffeemanagement.InformationActivity">
-
+    tools:context="com.tqd.duy.coffeemanagement.ConfirmActivity" android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,61 +12,11 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:orientation="vertical"
-        tools:context="com.tqd.duy.coffeemanagement.InformationActivity">
-
-        <TextView
-            android:id="@+id/activity_information_txt_number_table"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0"
-            android:text="@string/TABLE_NUM"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
-            android:textStyle="bold|italic" />
-
-        <TextView
-            android:id="@+id/activity_information_txt_state_table"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0"
-            android:text="@string/CLEAN"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
-            android:textStyle="bold|italic" />
-
-        <TextView
-            android:id="@+id/activity_information_txt_time_table"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0"
-            android:text="@string/Time"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
-            android:textStyle="bold|italic" />
-
-        <TextView
-            android:id="@+id/activity_information_txt_list_food"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0"
-            android:text="@string/list_food"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
-            android:textStyle="bold|italic" />
+        tools:context="com.tqd.duy.coffeemanagement.ConfirmActivity">
 
         <LinearLayout
-            android:id="@+id/activity_information_ll_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="0"
@@ -128,67 +76,37 @@
         </LinearLayout>
 
         <ListView
-            android:id="@+id/activity_information_lv_bill"
+            android:id="@+id/activity_confirm_lv_confirm"
             android:layout_width="match_parent"
-            android:layout_height="291dp"
+            android:layout_height="400dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="0" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_weight="0"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-        </LinearLayout>
+            android:layout_marginRight="5dp" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/activity_information_btn_pay"
+        android:id="@+id/activity_confirm_btn_ok"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_marginBottom="25dp"
-        android:layout_marginRight="40dp"
         android:layout_marginEnd="40dp"
         android:layout_weight="1"
         android:background="@color/colorAccent"
-        android:longClickable="false"
-        android:text="@string/Pay"
-        android:visibility="visible"
+        android:text="@string/OK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/activity_information_btn_clean"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill_vertical"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_weight="0"
-        android:background="@color/colorAccent"
-        android:text="@string/Done_cleaned"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/activity_information_btn_order"
+        android:id="@+id/activity_confirm_btn_continue"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_marginBottom="25dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
         android:layout_weight="1"
         android:background="@color/colorAccent"
-        android:text="@string/Order"
-        android:visibility="visible"
+        android:text="@string/continue_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

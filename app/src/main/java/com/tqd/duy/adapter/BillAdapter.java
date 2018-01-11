@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.tqd.duy.coffeemanagement.R;
 import com.tqd.duy.models.Food;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -50,10 +51,11 @@ public class BillAdapter extends ArrayAdapter<Food> {
         final Food food = objects.get(position);
         txtId.setText(position + 1 + "");
         txtNameFood.setText(food.getNameFood());
-        txtPriceFood.setText(food.getPriceFood()+"");
+        DecimalFormat price = new DecimalFormat("##,###");
+        txtPriceFood.setText(price.format(food.getPriceFood())+"");
         txtNumberFood.setText(food.getNumberFood()+ "");
-        double total = food.getNumberFood()*food.getPriceFood();
-        txtTotal.setText(total + "");
+        int total = food.getNumberFood()*food.getPriceFood();
+        txtTotal.setText(price.format(total) + "");
         row.setBackground(context.getResources().getDrawable(R.drawable.border_table));
         return  row;
     }
