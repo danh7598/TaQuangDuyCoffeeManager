@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,9 +21,8 @@ import java.util.ArrayList;
 public class LoginActivity extends AppCompatActivity {
     private EditText txtUserName;
     private EditText txtUserPassword;
-    private Button btnLogin;
+    private Button btnLogin, btnVisibilityPassword;
     private ArrayList<User> listUser;
-    private TextView txtNotification;
     private CheckBox chkPasswordRemember;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +38,31 @@ public class LoginActivity extends AppCompatActivity {
                 processLogin();
             }
         });
+        btnVisibilityPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setVisibilityPassword();
+            }
+        });
     }
+
+    private void setVisibilityPassword() {
+        if (txtUserPassword.getInputType() == 129) {
+            txtUserPassword.setInputType(144);
+            btnVisibilityPassword.setText(R.string.Hide);
+        }
+        else if (txtUserPassword.getInputType() == 144){
+            txtUserPassword.setInputType(129);
+            btnVisibilityPassword.setText(R.string.Visible);
+        }
+    }
+
     private void processLogin() {
         String userName = txtUserName.getText().toString();
         String userPass = txtUserPassword.getText().toString();
         for (User user : listUser) {
             if (userName.equalsIgnoreCase(user.getUserName())) {
                 if (!userPass.equals(user.getUserPassword())) {
-                    txtNotification.setText(R.string.user_error);
                     Toast.makeText(LoginActivity.this, R.string.user_error,
                             Toast.LENGTH_SHORT).show();
                 } else {
@@ -55,7 +72,6 @@ public class LoginActivity extends AppCompatActivity {
                     openMainActivity();
                 }
             } else {
-                txtNotification.setText(R.string.user_error);
                 Toast.makeText(LoginActivity.this, R.string.user_error,
                         Toast.LENGTH_SHORT).show();
             }
@@ -70,11 +86,11 @@ public class LoginActivity extends AppCompatActivity {
         txtUserName = findViewById(R.id.login_screen_txt_user_name);
         txtUserPassword = findViewById(R.id.login_screen_txt_user_password);
         btnLogin = findViewById(R.id.login_screen_btn_login);
-        txtNotification = findViewById(R.id.login_screen_txt_notification);
         listUser = new ArrayList<>();
         User user = new User();
         listUser = user.getSampleUser();
         chkPasswordRemember = findViewById(R.id.activity_login_chk_password_remember);
+        btnVisibilityPassword = findViewById(R.id.activity_login_btn_visibility_password);
         //Set data login nếu đã login từ trước
         SharedPreferences sharedPreferences = getSharedPreferences("userRemember",
                 MODE_PRIVATE);

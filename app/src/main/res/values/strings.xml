@@ -41,4 +41,6 @@
     <string name="continue_menu">Tiếp tục chọn</string>
     <string name="OK">OK</string>
     <string name="Detail">Chi tiết</string>
+    <string name="Hide">Ẩn</string>
+    <string name="Visible">Hiển thị</string>
     </resources>
