@@ -1,12 +1,15 @@
 package com.tqd.duy.coffeemanagement;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.Toast;
-
+import android.support.v7.widget.Toolbar;
 import com.tqd.duy.adapter.TableAdapter;
 import com.tqd.duy.models.Table;
 import java.util.ArrayList;
@@ -16,13 +19,34 @@ public class TableActivity extends AppCompatActivity {
     private ArrayList<Table> listTable;
     private TableAdapter adapterTable;
     private FloatingActionButton floatBtnSetting;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
+        Toolbar toolbar = findViewById(R.id.activity_table_toolbar);
+        setSupportActionBar(toolbar);
         addControls();
         addEvents();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_table, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.activity_table_mnLogout:
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void addControls() {
         gvTable = findViewById(R.id.activity_table_gv_table);
         floatBtnSetting = findViewById(R.id.activity_table_float_btn_setting);
