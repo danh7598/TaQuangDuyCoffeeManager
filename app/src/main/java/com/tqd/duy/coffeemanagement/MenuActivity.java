@@ -3,6 +3,7 @@ package com.tqd.duy.coffeemanagement;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -23,6 +24,8 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        Toolbar toolbar = findViewById(R.id.activity_menu_toolbar);
+        setSupportActionBar(toolbar);
         addControls();
         addEvents();
     }
@@ -52,6 +55,7 @@ public class MenuActivity extends AppCompatActivity {
     private void addControls() {
         lvMenu = findViewById(R.id.activity_menu_lv_menu);
         btnConfirm = findViewById(R.id.activity_menu_btn_confirm);
+        setTitle(getString(R.string.Menu));
         Food food = new Food();
         listFood = food.getSampleFood(this);
         adapterFood = new FoodAdapter(this,R.layout.item_food,listFood);

@@ -43,4 +43,7 @@
     <string name="Detail">Chi tiết</string>
     <string name="Hide">Ẩn</string>
     <string name="Visible">Hiển thị</string>
+    <string name="Logout">Đăng xuất</string>
+    <string name="Back">Trở lại</string>
+    <string name="Menu">Thực đơn</string>
     </resources>

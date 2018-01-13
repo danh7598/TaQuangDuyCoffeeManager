@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.print.PageRange;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -24,6 +25,8 @@ public class ConfirmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm);
+        Toolbar toolbar = findViewById(R.id.activity_confirm_toolbar);
+        setSupportActionBar(toolbar);
         addControls();
         addEvents();
     }
@@ -65,6 +68,7 @@ public class ConfirmActivity extends AppCompatActivity {
         lvConfirm = findViewById(R.id.activity_confirm_lv_confirm);
         btnOK = findViewById(R.id.activity_confirm_btn_ok);
         btnContinue = findViewById(R.id.activity_confirm_btn_continue);
+        setTitle(R.string.Confirm);
         listFood = new ArrayList<>();
         intent = getIntent();
         for (int i = 0; i < 10; i++) {
