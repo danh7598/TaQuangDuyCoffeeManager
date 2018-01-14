@@ -46,4 +46,7 @@
     <string name="Logout">Đăng xuất</string>
     <string name="Back">Trở lại</string>
     <string name="Menu">Thực đơn</string>
+    <string name="Confirm_Payment">Xác nhận thanh toán?</string>
+    <string name="Cancel">Hủy</string>
+    <string name="Confirm_Logout">Bạn có muốn đăng xuất?</string>
     </resources>
