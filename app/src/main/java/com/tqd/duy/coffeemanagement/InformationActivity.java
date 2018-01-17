@@ -72,7 +72,7 @@ public class InformationActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                changePaymentActivity();
             }
         });
         builder.setNegativeButton(R.string.Cancel, new DialogInterface.OnClickListener() {
@@ -84,6 +84,17 @@ public class InformationActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
 }
+
+    private void changePaymentActivity() {
+        Intent intent = new Intent(this,PaymentActivity.class);
+        for (int i = 0;i < listFood.size();i++){
+            if(listFood.get(i).getNumberFood() != 0)
+            {
+                intent.putExtra("payment_food_" + i,listFood.get(i));
+            }
+        }
+        startActivity(intent);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -49,4 +49,12 @@
     <string name="Confirm_Payment">Xác nhận thanh toán?</string>
     <string name="Cancel">Hủy</string>
     <string name="Confirm_Logout">Bạn có muốn đăng xuất?</string>
-    </resources>
+    <string name="Total_money">Thành tiền:</string>
+    <string name="Discount">Khuyến mãi:</string>
+    <string name="Customer_paid">Khách trả:</string>
+    <string name="Rest">Tiền thối lại:</string>
+    <string name="Reload">Làm mới</string>
+    <string name="VND">VNĐ</string>
+    <string name="Finish_Payment">Hoàn tất thanh toán</string>
+
+</resources>
