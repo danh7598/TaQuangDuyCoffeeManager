@@ -126,7 +126,7 @@
             android:layout_weight="0"
             android:text="@string/Discount"
             android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_payment_txt_total" />
 
@@ -138,7 +138,7 @@
             android:autoText="true"
             android:ems="10"
             android:inputType="number"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toEndOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/activity_payment_txt_total" />
 
@@ -149,7 +149,7 @@
             android:layout_weight="0"
             android:text="%"
             android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_payment_txt_total" />
 
@@ -163,7 +163,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/Total_money"
         android:textColor="@android:color/background_dark"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
@@ -187,7 +187,7 @@
             android:layout_weight="0"
             android:text="@string/Customer_paid"
             android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -200,7 +200,7 @@
             android:ems="10"
             android:freezesText="true"
             android:inputType="number"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/activity_payment_txt_discount" />
 
@@ -211,7 +211,7 @@
             android:layout_weight="0"
             android:text="@string/VND"
             android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_payment_txt_total" />
 
@@ -226,7 +226,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/Rest"
         android:textColor="@android:color/background_dark"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
