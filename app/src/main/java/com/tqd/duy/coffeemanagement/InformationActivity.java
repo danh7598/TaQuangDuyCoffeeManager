@@ -1,14 +1,11 @@
 package com.tqd.duy.coffeemanagement;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-//không dùng thì xóa
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +15,6 @@ import android.widget.TextView;
 import com.tqd.duy.adapter.BillAdapter;
 import com.tqd.duy.models.Food;
 import com.tqd.duy.models.Table;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -62,7 +58,32 @@ public class InformationActivity extends AppCompatActivity {
                 changeCleanTableState();
             }
         });
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                confirmDialogue();
+            }
+        });
     }
+
+    private void confirmDialogue() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.Confirm_Payment);
+        builder.setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        builder.setNegativeButton(R.string.Cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -98,8 +119,8 @@ public class InformationActivity extends AppCompatActivity {
                         for (int j = 0; loop == true && listFood.size() > j; j++) {
                             //đk lặp là kiểm tra có trùng hay k và số lần lặp nhỏ hơn size listFood
                             //nếu không bị trùng (true) thì kiểm tra tiếp cho đến khi hết list
-    //So sánh nếu lần order tiếp theo có món đã trùng với lần order ban đầu
-    //tăng số lượng món nếu trùng
+                            //So sánh nếu lần order tiếp theo có món đã trùng với lần order ban đầu
+                            //tăng số lượng món nếu trùng
                             if (listFood.get(j).getNameFood().equals((intentFood.getNameFood()))) {
                                 listFood.get(j).setNumberFood(listFood.get(j).getNumberFood() +
                                         ((Food) data.getSerializableExtra("food_confirmed_" + i)).getNumberFood());
@@ -111,24 +132,26 @@ public class InformationActivity extends AppCompatActivity {
                             //trùng thì thêm vô listFood
                             listFood.add(intentFood);
                         }
-                    }
-                    else {
+                    } else {
                         //nếu list chưa có chi (size = 0) thì thêm vào mà k xét trùng
                         listFood.add(intentFood);
                     }
                 }
             }
         }
-        Calendar calendar = Calendar.getInstance(); //lấy thời gian hiện tại
-        Date time = calendar.getTime();
-        SimpleDateFormat showDay = new SimpleDateFormat("dd/MM/yyyy");//format dạng thời gian
-        SimpleDateFormat showTime = new SimpleDateFormat("H:mm:ss a");//-------------------
-        txtTime.setText("Thời gian: " + showTime.format(time) + " " + showDay.format(time));
-        txtListFood.setVisibility(View.VISIBLE);
-        txtTime.setVisibility(View.VISIBLE);
-        llTitle.setVisibility(View.VISIBLE);
-        adapterBill = new BillAdapter(this, R.layout.item_bill, listFood);
-        lvBill.setAdapter(adapterBill);
+        if (listFood.size() != 0) {
+            Calendar calendar = Calendar.getInstance(); //lấy thời gian hiện tại
+            Date time = calendar.getTime();
+            SimpleDateFormat showDay = new SimpleDateFormat("dd/MM/yyyy");//format dạng thời gian
+            SimpleDateFormat showTime = new SimpleDateFormat("H:mm:ss a");//-------------------
+            txtTime.setText("Thời gian: " + showTime.format(time) + " " + showDay.format(time));
+            txtListFood.setVisibility(View.VISIBLE);
+            txtTime.setVisibility(View.VISIBLE);
+            llTitle.setVisibility(View.VISIBLE);
+            adapterBill = new BillAdapter(this, R.layout.item_bill, listFood);
+            lvBill.setAdapter(adapterBill);
+            btnPay.setEnabled(true);
+        }
     }
 
     private void addControls() {
