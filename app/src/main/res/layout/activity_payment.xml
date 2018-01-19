@@ -135,7 +135,7 @@
             android:layout_width="153dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:autoText="true"
+            android:autoText="false"
             android:ems="10"
             android:inputType="number"
             android:textSize="17sp"

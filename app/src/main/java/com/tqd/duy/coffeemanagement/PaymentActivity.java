@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -26,6 +28,8 @@ public class PaymentActivity extends AppCompatActivity {
     private ListView lvFood;
     private BillAdapter adapterBill;
     private ArrayList<Food> listFood;
+    private double total;
+    private DecimalFormat price = new DecimalFormat("##,###");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,11 +51,11 @@ public class PaymentActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.activity_payment_btn_reload:
-                setTextView();
-                break;
             case R.id.activity_payment_btn_tick:
                 confirmPayment();
+                break;
+            case android.R.id.home:
+                onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -90,36 +94,70 @@ public class PaymentActivity extends AppCompatActivity {
         lvFood.setAdapter(adapterBill);
         getBillAdapter();
         setTextView();
+
     }
 
     private void setTextView() {
-        DecimalFormat price = new DecimalFormat("##,###");
-        double total = 0;
+        total = 0;
         for (Food food : listFood) {
             total += food.getNumberFood()*food.getPriceFood();
         }
-        double discount;
-        if (txtDiscount.getText().length() == 0) {
-            discount = 0;
-        }
-        else {
-            discount = Double.parseDouble(txtDiscount.getText().toString());
-        }
-        total = total - total*(discount/100);
         txtTotal.setText(getString(R.string.Total_money) + " " + price.format(total) + " VNĐ");
-        int rest;
-        if (txtPaid.getText().length() == 0) {
-            rest = 0;
-        }
-        else {
-            rest = Integer.parseInt(txtPaid.getText().toString());
-        }
-        if (rest - total <= 0) {
-            txtRest.setText(getString(R.string.Rest) + " 0"  + " VNĐ");
-        }
-        else {
-            txtRest.setText(getString(R.string.Rest) + " " + price.format(rest - total) + " VNĐ");
-        }
+        txtRest.setText(getString(R.string.Rest) + " 0"  + " VNĐ");
+        txtDiscount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                total = 0;
+                for (Food food : listFood) {
+                    total += food.getNumberFood()*food.getPriceFood();
+                }
+                txtTotal.setText(getString(R.string.Total_money) + " " + price.format(total) + " VNĐ");
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                double discount;
+                if (txtDiscount.getText().length() == 0) {
+                    discount = 0;
+                }
+                else {
+                    discount = Double.parseDouble(txtDiscount.getText().toString());
+                }
+                total = total - total*(discount/100);
+                txtTotal.setText(getString(R.string.Total_money) + " " + price.format(total) + " VNĐ");
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        txtPaid.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                txtRest.setText(getString(R.string.Rest) + " 0"  + " VNĐ");
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                int rest;
+                if (txtPaid.getText().length() == 0) {
+                    rest = 0;
+                }
+                else {
+                    rest = Integer.parseInt(txtPaid.getText().toString());
+                }
+                if (rest - total <= 0) {
+                    txtRest.setText(getString(R.string.Rest) + " 0"  + " VNĐ");
+                }
+                else {
+                    txtRest.setText(getString(R.string.Rest) + " " + price.format(rest - total) + " VNĐ");
+                }
+            }
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
     }
 
     private void getBillAdapter() {

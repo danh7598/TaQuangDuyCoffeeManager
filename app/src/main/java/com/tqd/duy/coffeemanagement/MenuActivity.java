@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.tqd.duy.adapter.FoodAdapter;
@@ -20,6 +23,7 @@ public class MenuActivity extends AppCompatActivity {
     private ArrayList<Food> listFood;
     private FoodAdapter adapterFood;
     private Button btnConfirm;
+    private EditText txtSearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,11 +59,28 @@ public class MenuActivity extends AppCompatActivity {
     private void addControls() {
         lvMenu = findViewById(R.id.activity_menu_lv_menu);
         btnConfirm = findViewById(R.id.activity_menu_btn_confirm);
+        txtSearch = findViewById(R.id.activity_menu_txt_search);
         setTitle(getString(R.string.Menu));
         Food food = new Food();
         listFood = food.getSampleFood(this);
         adapterFood = new FoodAdapter(this,R.layout.item_food,listFood);
         lvMenu.setAdapter(adapterFood);
+        txtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
 
     @Override
