@@ -20,11 +20,14 @@
         <activity android:name=".InformationActivity" />
         <activity
             android:name=".MenuActivity"
-            android:label="@string/Order" />
+            android:label="@string/Order"
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".ConfirmActivity"
             android:label="@string/Confirm"></activity>
-        <activity android:name=".PaymentActivity"></activity>
+        <activity
+            android:name=".PaymentActivity">
+        </activity>
     </application>
 
 </manifest>
