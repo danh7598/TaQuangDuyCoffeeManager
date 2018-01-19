@@ -56,5 +56,6 @@
     <string name="Reload">Làm mới</string>
     <string name="VND">VNĐ</string>
     <string name="Finish_Payment">Hoàn tất thanh toán</string>
+    <string name="Search">Tìm kiếm</string>
 
 </resources>

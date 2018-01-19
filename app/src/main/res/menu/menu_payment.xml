@@ -4,11 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
     <item
-        android:id="@+id/activity_payment_btn_reload"
-        android:icon="@drawable/reload"
-        android:title="@string/Reload"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/activity_payment_btn_tick"
         android:icon="@drawable/tick"
         android:title="@string/Finish_Payment"
